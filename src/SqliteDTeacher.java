@@ -5,7 +5,7 @@ public class SqliteDTeacher {
 	public static Connection dbConnection() {
 		try {
 			Class.forName("org.sqlite.JDBC");
-			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Klins\\Desktop\\JPL 2 Workspace\\Final Project\\src\\TeacherLogin.db");
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:TeacherLogin.db");
 			//JOptionPane.showMessageDialog(null, " Connection Successful");
 			return conn;
 			

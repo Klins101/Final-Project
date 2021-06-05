@@ -9,6 +9,7 @@ import net.proteanit.sql.DbUtils;
 
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -57,7 +58,7 @@ public class StudentHome extends JFrame {
 		setBounds(0, 0, 1360, 760);
 		getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Enter Student Number");
+		JLabel lblNewLabel = new JLabel("Enter Full Name");
 		lblNewLabel.setFont(new Font("Trebuchet MS", Font.BOLD, 12));
 		lblNewLabel.setBounds(10, 26, 203, 14);
 		getContentPane().add(lblNewLabel);
@@ -67,7 +68,7 @@ public class StudentHome extends JFrame {
 		getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblConfirmFullName = new JLabel("Confirm Full Name");
+		JLabel lblConfirmFullName = new JLabel("Enter Student Number ");
 		lblConfirmFullName.setFont(new Font("Trebuchet MS", Font.BOLD, 12));
 		lblConfirmFullName.setBounds(10, 53, 203, 14);
 		getContentPane().add(lblConfirmFullName);
@@ -89,7 +90,7 @@ public class StudentHome extends JFrame {
 					
 				}
 				catch(Exception e0) {
-					e0.printStackTrace();
+					JOptionPane.showMessageDialog(null, "Results not entered by teacher");
 					
 				}
 				

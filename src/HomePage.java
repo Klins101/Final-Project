@@ -91,10 +91,10 @@ public class HomePage {
 		btnStudent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String query = "select * from '"+ textField.getText() +"' where username=? and password=?";
+					String query = "select * from '"+ textField.getText() +"' where password=?";
 					PreparedStatement pst = connection1.prepareStatement(query);
-					pst.setString(1, textField.getText());
-					pst.setString(2, textField_1.getText());
+					//pst.setString(1, textField.getText());
+					pst.setString(1, textField_1.getText());
 					ResultSet rs = pst.executeQuery();
 					int count = 0;
 					while(rs.next()) {
@@ -120,7 +120,7 @@ public class HomePage {
 					
 				}
 				catch(Exception e1){
-					JOptionPane.showMessageDialog(null, e);
+					JOptionPane.showMessageDialog(null, e1);
 				}
 				
 				
@@ -137,7 +137,7 @@ public class HomePage {
 		btnTeacher.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String query = "select * from AddTeacher where username=? and password=?";
+					String query = "select * from '"+ textField_2.getText() +"' where username=? and password=?";
 					PreparedStatement pst = connection.prepareStatement(query);
 					pst.setString(1, textField_2.getText());
 					pst.setString(2, textField_3.getText());
@@ -224,7 +224,7 @@ public class HomePage {
 		btnAdmin.setBounds(10, 442, 144, 23);
 		frmExaminationResultsSystem.getContentPane().add(btnAdmin);
 		
-		JLabel lblNewLabel_4 = new JLabel("Student Number");
+		JLabel lblNewLabel_4 = new JLabel("Full Name");
 		lblNewLabel_4.setFont(new Font("Trebuchet MS", Font.BOLD, 13));
 		lblNewLabel_4.setBounds(272, 259, 144, 14);
 		frmExaminationResultsSystem.getContentPane().add(lblNewLabel_4);
@@ -234,7 +234,7 @@ public class HomePage {
 		textField.setBounds(272, 289, 199, 20);
 		frmExaminationResultsSystem.getContentPane().add(textField);
 		
-		JLabel lblNewLabel_4_1 = new JLabel("Full Name");
+		JLabel lblNewLabel_4_1 = new JLabel("Password");
 		lblNewLabel_4_1.setFont(new Font("Trebuchet MS", Font.BOLD, 13));
 		lblNewLabel_4_1.setBounds(272, 336, 144, 14);
 		frmExaminationResultsSystem.getContentPane().add(lblNewLabel_4_1);

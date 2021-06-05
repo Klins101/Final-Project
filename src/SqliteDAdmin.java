@@ -5,7 +5,7 @@ public class SqliteDAdmin {
 	public static Connection dbConnection() {
 		try {
 			Class.forName("org.sqlite.JDBC");
-			Connection connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Klins\\Desktop\\JPL 2 Workspace\\Final Project\\src\\DataBases\\AdminLogin.db");
+			Connection connection = DriverManager.getConnection("jdbc:sqlite:AdminLogin.db");
 			//JOptionPane.showMessageDialog(null, " Connection Successful");
 			return connection;
 			

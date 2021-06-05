@@ -223,7 +223,7 @@ public class TeachHome extends JFrame {
 				try {
 					String query1 = " CREATE TABLE '"+ textField_10.getText() +"' (\r\n"
 							+ "	\"Full Name\"	TEXT,\r\n"
-							+ "	\"\"	TEXT,\r\n"
+							+ "	\"Student Number\"	TEXT,\r\n"
 							+ "	\"Username\"	TEXT,\r\n"
 							+ "	\"Password\"	TEXT\r\n"
 							+ "); ";
@@ -628,7 +628,7 @@ public class TeachHome extends JFrame {
 		tabbedPane.addTab("Check Student Results", null, panel_4, null);
 		panel_4.setLayout(null);
 		
-		JLabel lblNewLabel_3 = new JLabel("Enter Student Number");
+		JLabel lblNewLabel_3 = new JLabel("Enter Students' Full Name");
 		lblNewLabel_3.setFont(new Font("Trebuchet MS", Font.BOLD, 12));
 		lblNewLabel_3.setBounds(27, 23, 172, 14);
 		panel_4.add(lblNewLabel_3);
@@ -638,7 +638,7 @@ public class TeachHome extends JFrame {
 		panel_4.add(textField_38);
 		textField_38.setColumns(10);
 		
-		JLabel lblNewLabel_3_1 = new JLabel("Enter Student Full Name");
+		JLabel lblNewLabel_3_1 = new JLabel("Enter Student Number");
 		lblNewLabel_3_1.setFont(new Font("Trebuchet MS", Font.BOLD, 12));
 		lblNewLabel_3_1.setBounds(27, 72, 172, 14);
 		panel_4.add(lblNewLabel_3_1);

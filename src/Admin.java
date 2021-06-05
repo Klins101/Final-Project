@@ -285,7 +285,7 @@ public class Admin extends JFrame {
 				try {
 					String query1 = " CREATE TABLE '"+ textField_4.getText() +"' (\r\n"
 							+ "	\"First Name\"	TEXT,\r\n"
-							+ "	\"Student Number\"	TEXT,\r\n"
+							+ "	\"Last Name\"	TEXT,\r\n"
 							+ "	\"Username\"	TEXT,\r\n"
 							+ "	\"Password\"	TEXT\r\n"
 							+ "); ";
@@ -294,7 +294,7 @@ public class Admin extends JFrame {
 					pst1.execute();	
 					pst1.close();
 					String query2 = " INSERT INTO '"+ textField_4.getText() +"' \r\n"
-							+ "(\"Full Name\", \"Student Number\", \"Username\", \"Password\")\r\n"
+							+ "(\"First Name\", \"Last Name\", \"Username\", \"Password\")\r\n"
 							+ "VALUES (?, ?, ?, ?); ";
 					PreparedStatement pst2 = connection2.prepareStatement(query2);
 					pst2.setString(1, textField_2.getText());
@@ -310,7 +310,8 @@ public class Admin extends JFrame {
 					
 				}
 				catch(Exception e0) {
-					e0.printStackTrace();
+					JOptionPane.showMessageDialog(null, "Unable to create teacher account");
+					
 					
 				}
 				try {
@@ -435,7 +436,7 @@ public class Admin extends JFrame {
 				try {
 					String query1 = " CREATE TABLE '"+ textField_10.getText() +"' (\r\n"
 							+ "	\"Full Name\"	TEXT,\r\n"
-							+ "	\"\"	TEXT,\r\n"
+							+ "	\"Student Number\"	TEXT,\r\n"
 							+ "	\"Username\"	TEXT,\r\n"
 							+ "	\"Password\"	TEXT\r\n"
 							+ "); ";
@@ -897,9 +898,5 @@ public class Admin extends JFrame {
 			}
 		));
 		scrollPane.setColumnHeaderView(table);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPane.addTab("Update Student Results", null, panel_5, null);
-		panel_5.setLayout(null);
 	}
 }
